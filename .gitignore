@@ -21,15 +21,11 @@ data/User/*
 data/instructions.txt
 libs/Mote-*
 libs/rev1/*
-*_Gear.lua
-*_Crafting.lua
-*-Items.lua
-*-Globals.lua
+# Character files (*_Gear.lua, *-Globals.lua, etc.) allowed so they can sync to fork
+# data/User, export, common, Extras stay ignored below
 data/export/*
 data/common/*
-data/User/*
 data/Extras/*
 libs/closetCleaner.lua
-Rename.bat
 Modes.lua
 organizer-lib.lua
