@@ -19,11 +19,11 @@ function user_job_setup()
 ------------------------------------------------------------------
 -- Artifact Armor (AF)
 ------------------------------------------------------------------
-   gear.artifact.head  = {head="Pill. Bonnet +1"}
-   gear.artifact.body  = {body="Pillager's Vest +1"}
-   gear.artifact.hands = {hands="Pill. Armlets +1"}
-   gear.artifact.legs  = {legs="Pill. Culottes +1"}
-   gear.artifact.feet  = {feet="Pill. Poulaines +1"}
+   gear.artifact_head  = {head="Pill. Bonnet +1"}
+   gear.artifact_body  = {body="Pillager's Vest +1"}
+   gear.artifact_hands = {hands="Pill. Armlets +1"}
+   gear.artifact_legs  = {legs="Pill. Culottes +1"}
+   gear.artifact_feet  = {feet="Pill. Poulaines +1"}
 
 ------------------------------------------------------------------
 -- Relic Armor
@@ -37,11 +37,11 @@ function user_job_setup()
 ------------------------------------------------------------------
 -- Empyrean Armor
 ------------------------------------------------------------------
-   gear.empyrean.head  = {head=""}
-   gear.empyrean.body  = {body=""}
-   gear.empyrean.hands = {hands=""}
-   gear.empyrean.legs  = {legs=""}
-   gear.empyrean.feet  = {feet="Skulk. Poulaines +1"}
+   gear.empyrean_head  = {head=""}
+   gear.empyrean_body  = {body=""}
+   gear.empyrean_hands = {hands=""}
+   gear.empyrean_legs  = {legs=""}
+   gear.empyrean_feet  = {feet="Skulk. Poulaines +1"}
 
 ------------------------------------------------------------------
 -- JSE Capes
@@ -82,7 +82,7 @@ function init_gear_sets()
 	sets.buff.Sleep = {}
 	
 	sets.buff['Sneak Attack'] = {}
-	sets.buff['Trick Attack'] = {"Pill. Armlets +1"}
+	sets.buff['Trick Attack'] = {hands="Pill. Armlets +1"}
 
 	-- Extra Melee sets.  Apply these on top of melee sets.
 	sets.Knockback = {}
@@ -160,15 +160,19 @@ function init_gear_sets()
 		
 	sets.precast.WS.Acc = set_combine(sets.precast.WS, {neck="Combatant's Torque",ear1="Mache Earring +1",ear2="Odr Earring",body="Meg. Cuirie +2",waist="Olseni Belt",legs="Meg. Chausses +2"})
 
+	sets.precast.WS.Fodder = set_combine(sets.precast.WS, {})
+
 	-- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
 	sets.precast.WS["Rudra's Storm"] = set_combine(sets.precast.WS, {})
 	sets.precast.WS["Rudra's Storm"].Acc = set_combine(sets.precast.WS.Acc, {body="Meg. Cuirie +2"})
+	sets.precast.WS["Rudra's Storm"].Fodder = set_combine(sets.precast.WS["Rudra's Storm"], {})
 	sets.precast.WS["Rudra's Storm"].SA = set_combine(sets.precast.WS["Rudra's Storm"].Fodder, {ammo="Yetshila +1",body="Meg. Cuirie +2",legs="Pill. Culottes +1"})
 	sets.precast.WS["Rudra's Storm"].TA = set_combine(sets.precast.WS["Rudra's Storm"].Fodder, {ammo="Yetshila +1",body="Meg. Cuirie +2",hands="Pill. Armlets +1",legs="Pill. Culottes +1"})
 	sets.precast.WS["Rudra's Storm"].SATA = set_combine(sets.precast.WS["Rudra's Storm"].Fodder, {ammo="Yetshila +1",body="Meg. Cuirie +2",hands="Pill. Armlets +1",legs="Pill. Culottes +1"})
 	
 	sets.precast.WS["Evisceration"] = set_combine(sets.precast.WS, {ammo="Yetshila +1",head="Adhemar Bonnet +1",ear2="Odr Earring",neck="Fotia Gorget",hands="Mummu Wrists +2",ring1="Begrudging Ring",waist="Fotia Belt",legs="Pill. Culottes +1",feet="Mummu Gamash. +2"}) -- body="Abnoba Kaftan",
 	sets.precast.WS["Evisceration"].Acc = set_combine(sets.precast.WS.Acc, {ammo="Yetshila +1",head="Mummu Bonnet +2",ring1="Begrudging Ring",neck="Fotia Gorget",hands="Mummu Wrists +2",waist="Fotia Belt",legs="Mummu Kecks +2",feet="Mummu Gamash. +2"}) -- body="Sayadio's Kaftan",
+	sets.precast.WS['Evisceration'].Fodder = set_combine(sets.precast.WS['Evisceration'], {})
 	sets.precast.WS["Evisceration"].SA = set_combine(sets.precast.WS["Rudra's Storm"].Fodder, {ammo="Yetshila +1",head="Adhemar Bonnet +1",body="Meg. Cuirie +2",legs="Pill. Culottes +1"})
 	sets.precast.WS["Evisceration"].TA = set_combine(sets.precast.WS["Rudra's Storm"].Fodder, {ammo="Yetshila +1",head="Adhemar Bonnet +1",body="Meg. Cuirie +2",hands="Pill. Armlets +1",legs="Pill. Culottes +1"})
 	sets.precast.WS["Evisceration"].SATA = set_combine(sets.precast.WS["Rudra's Storm"].Fodder, {ammo="Yetshila +1",head="Adhemar Bonnet +1",body="Meg. Cuirie +2",hands="Pill. Armlets +1",legs="Pill. Culottes +1"})

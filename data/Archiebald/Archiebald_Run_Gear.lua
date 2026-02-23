@@ -1,5 +1,4 @@
 function user_job_setup()
-
 	state.OffenseMode:options('Normal','Acc','FullAcc')
 	state.HybridMode:options('Tank','Tank_HP','Normal','DTLite')
 	state.WeaponskillMode:options('Match','Normal','Acc','FullAcc')
@@ -17,39 +16,38 @@ function user_job_setup()
 ------------------------------------------------------------------
 -- Artifact Armor (AF)
 ------------------------------------------------------------------
-   gear.artifact.head  = {head="Rune. Bandeau +3"}
-   gear.artifact.body  = {body="Runeist Coat +3"}
-   gear.artifact.hands = {hands="Runeist Mitons +3"}
-   gear.artifact.legs  = {legs="Rune. Trousers +3"}
-   gear.artifact.feet  = {feet="Runeist Bottes +2"}
+	gear.artifact_head  = {head="Rune. Bandeau +3"}
+	gear.artifact_body  = {body="Runeist Coat +3"}
+	gear.artifact_hands = {hands="Runeist Mitons +3"}
+	gear.artifact_legs  = {legs="Rune. Trousers +3"}
+	gear.artifact_feet  = {feet="Runeist Bottes +2"}
 ------------------------------------------------------------------
 -- Relic Armor
 ------------------------------------------------------------------
-   gear.relic_head  = {head=""}
-   gear.relic_body  = {body="Futhark Coat +2"}
-   gear.relic_hands = {hands="Futhark Mitons +1"}
-   gear.relic_legs  = {legs="Futhark Trousers +3"}
-   gear.relic_feet  = {feet="Futhark Boots +1"}
+	gear.relic_head  = {head=""}
+	gear.relic_body  = {body="Futhark Coat +2"}
+	gear.relic_hands = {hands="Futhark Mitons +1"}
+	gear.relic_legs  = {legs="Futhark Trousers +3"}
+	gear.relic_feet  = {feet="Futhark Boots +1"}
 ------------------------------------------------------------------
 -- Empyrean Armor
 ------------------------------------------------------------------
-   gear.empyrean.head  = {head="Erilaz Galea +2"}
-   gear.empyrean.body  = {body="Erilaz Surcoat +2"}
-   gear.empyrean.hands = {hands="Erilaz Gauntlets +2"}
-   gear.empyrean.legs  = {legs="Eri. Leg Guards +2"}
-   gear.empyrean.feet  = {feet="Erilaz Greaves +2"}
+	gear.empyrean_head  = {head="Erilaz Galea +2"}
+	gear.empyrean_body  = {body="Erilaz Surcoat +2"}
+	gear.empyrean_hands = {hands="Erilaz Gauntlets +2"}
+	gear.empyrean_legs  = {legs="Eri. Leg Guards +2"}
+	gear.empyrean_feet  = {feet="Erilaz Greaves +2"}
 ------------------------------------------------------------------
 -- JSE Capes
 ------------------------------------------------------------------
-gear.enmity_jse_back = { name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}}
-gear.da_jse_back = { name="Ogma's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10',}}
-gear.stp_jse_back = { name="Ogma's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}}
-gear.wsd_jse_back = { name="Ogma's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}}
-gear.fc_jse_back = { name="Ogma's Cape", augments={'HP+60','HP+8','"Fast Cast"+10','Phys. dmg. taken-10%',}}
-gear.agi_evasion_jse_back = { name="Ogma's Cape", augments={'AGI+20','Eva.+20 /Mag. Eva.+20','Evasion+10','Enmity+10','Evasion+15',}}
-gear.parry_jse_back = { name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Parrying rate+5%',}}
-gear.sird_jse_back = { name="Ogma's Cape", augments={'HP+60','HP+20','Enmity+10','Spell interruption rate down-10%',}}
-
+	gear.enmity_jse_back = { name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}}
+	gear.da_jse_back = { name="Ogma's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10',}}
+	gear.stp_jse_back = { name="Ogma's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Phys. dmg. taken-10%',}}
+	gear.wsd_jse_back = { name="Ogma's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}}
+	gear.fc_jse_back = { name="Ogma's Cape", augments={'HP+60','HP+8','"Fast Cast"+10','Phys. dmg. taken-10%',}}
+	gear.agi_evasion_jse_back = { name="Ogma's Cape", augments={'AGI+20','Eva.+20 /Mag. Eva.+20','Evasion+10','Enmity+10','Evasion+15',}}
+	gear.parry_jse_back = { name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Parrying rate+5%',}}
+	gear.sird_jse_back = { name="Ogma's Cape", augments={'HP+60','HP+20','Enmity+10','Spell interruption rate down-10%',}}
 ------------------------------------------------------------------
 -- JSE Earrings
 ------------------------------------------------------------------
@@ -84,7 +82,7 @@ function init_gear_sets()
 	sets.Enmity = {main="Aettir",sub="Utu Grip",ammo="Sapience Orb",
 	     head="Halitus Helm",neck="Futhark Torque +2",ear1="Tuisto Earring",ear2="Trux Earring",
 	     body="Emet Harness +1",hands="Kurys Gloves",ring1="Murky Ring",ring2="Moonlight Ring",
-		 back=gear.enmity_jse_back,waist="Kasari Belt",legs=gear.empyrean.legs,feet=gear.empyrean.feet}
+		 back=gear.enmity_jse_back,waist="Kasari Belt",legs=gear.empyrean_legs,feet=gear.empyrean_feet}
 		 
 	sets.Enmity.SIRD = {main="Aettir",sub="Utu Grip",ammo="Staunch Tathlum +1",
 		head="Nyame Helm",neck="Moonlight Necklace",ear1="Genmei Earring",ear2="Trux Earring",
@@ -94,7 +92,7 @@ function init_gear_sets()
 	sets.Enmity.DT = {main="Aettir",sub="Utu Grip",ammo="Staunch Tathlum +1",
 		head="Nyame Helm",neck="Unmoving Collar +1",ear1="Tuisto Earring",ear2="Odnowa Earring +1",
 		body="Emet Harness +1",hands="Nyame Gauntlets",ring1="Gelatinous Ring +1",ring2="Moonlight Ring",
-		back=gear.enmity_jse_back,waist="Flume Belt +1",legs=gear.empyrean.legs,feet="Nyame Sollerets"}
+		back=gear.enmity_jse_back,waist="Flume Belt +1",legs=gear.empyrean_legs,feet="Nyame Sollerets"}
 		
 	--------------------------------------
 	-- Precast sets
@@ -103,12 +101,12 @@ function init_gear_sets()
 	-- Item sets.
 
 	-- Precast sets to enhance JAs
-	sets.precast.JA['Vallation'] = set_combine(sets.Enmity,{body=gear.artifact.body,legs=gear.relic_legs})
+	sets.precast.JA['Vallation'] = set_combine(sets.Enmity,{body=gear.artifact_body,legs=gear.relic_legs})
 	sets.precast.JA['Valiance'] = sets.precast.JA['Vallation']
-	sets.precast.JA['Pflug'] = set_combine(sets.Enmity,{feet=gear.artifact.feet})
+	sets.precast.JA['Pflug'] = set_combine(sets.Enmity,{feet=gear.artifact_feet})
 	sets.precast.JA['Battuta'] = set_combine(sets.Enmity,{head=gear.relic_head})
 	sets.precast.JA['Liement'] = set_combine(sets.Enmity,{body=gear.relic_body})
-	sets.precast.JA['Gambit'] = set_combine(sets.Enmity,{hands=gear.artifact.hands})
+	sets.precast.JA['Gambit'] = set_combine(sets.Enmity,{hands=gear.artifact_hands})
 	sets.precast.JA['Rayke'] = set_combine(sets.Enmity,{feet=gear.relic_feet})
 	sets.precast.JA['Elemental Sforzo'] = set_combine(sets.Enmity,{body=gear.relic_body})
 	sets.precast.JA['Swordplay'] = set_combine(sets.Enmity,{hands=gear.relic_hands})
@@ -122,12 +120,12 @@ function init_gear_sets()
 	sets.precast.JA['Aggressor'] = set_combine(sets.Enmity, {})
 	sets.precast.JA['Animated Flourish'] = set_combine(sets.Enmity, {})
 
-	sets.precast.JA['Vallation'].DT = set_combine(sets.Enmity.DT,{body=gear.artifact.body, legs=gear.relic_legs})
+	sets.precast.JA['Vallation'].DT = set_combine(sets.Enmity.DT,{body=gear.artifact_body, legs=gear.relic_legs})
 	sets.precast.JA['Valiance'].DT = sets.precast.JA['Vallation'].DT
-	sets.precast.JA['Pflug'].DT = set_combine(sets.Enmity.DT,{feet=gear.artifact.feet})
+	sets.precast.JA['Pflug'].DT = set_combine(sets.Enmity.DT,{feet=gear.artifact_feet})
 	sets.precast.JA['Battuta'].DT = set_combine(sets.Enmity.DT,{head=gear.relic_head})
 	sets.precast.JA['Liement'].DT = set_combine(sets.Enmity.DT,{body=gear.relic_body})
-	sets.precast.JA['Gambit'].DT = set_combine(sets.Enmity.DT,{hands=gear.artifact.hands})
+	sets.precast.JA['Gambit'].DT = set_combine(sets.Enmity.DT,{hands=gear.artifact_hands})
 	sets.precast.JA['Rayke'].DT = set_combine(sets.Enmity.DT,{feet=gear.relic_feet})
 	sets.precast.JA['Elemental Sforzo'].DT = set_combine(sets.Enmity.DT,{body=gear.relic_body})
 	sets.precast.JA['Swordplay'].DT = set_combine(sets.Enmity.DT,{hands=gear.relic_hands})
@@ -152,7 +150,7 @@ function init_gear_sets()
 	sets.element.Dark = {head="Pixie Hairpin +1",ring1="Archon Ring"}
 
 	-- Pulse sets, different stats for different rune modes, stat aligned.
-	sets.precast.JA['Vivacious Pulse'] = {head=gear.empyrean.head,neck="Incanter's Torque",ring1="Stikini Ring",ring2="Stikini Ring +1",legs=gear.artifact.legs}
+	sets.precast.JA['Vivacious Pulse'] = {head=gear.empyrean_head,neck="Incanter's Torque",ring1="Stikini Ring",ring2="Stikini Ring +1",legs=gear.artifact_legs}
 	sets.precast.JA['Vivacious Pulse']['Ignis'] = set_combine(sets.precast.JA['Vivacious Pulse'], {})
 	sets.precast.JA['Vivacious Pulse']['Gelus'] = set_combine(sets.precast.JA['Vivacious Pulse'], {})
 	sets.precast.JA['Vivacious Pulse']['Flabra'] = set_combine(sets.precast.JA['Vivacious Pulse'], {})
@@ -175,15 +173,15 @@ function init_gear_sets()
 		
 	-- Fast cast sets for spells
 	sets.precast.FC = {ammo="Sapience Orb",
-	     head=gear.artifact.head,neck="Orunmila's Torque",ear1="Etiolation Earring",ear2="Odnowa Earring +1",
-	     body=gear.empyrean.body,hands="Leyline Gloves",ring1="Kishar Ring",ring2="Moonlight Ring",
+	     head=gear.artifact_head,neck="Orunmila's Torque",ear1="Etiolation Earring",ear2="Odnowa Earring +1",
+	     body=gear.empyrean_body,hands="Leyline Gloves",ring1="Kishar Ring",ring2="Moonlight Ring",
 		 back=gear.fc_jse_back,legs="Agwu's Slops",feet="Carmine Greaves +1"}
 			
 	sets.precast.FC.Inspiration = {}
 			
 	sets.precast.FC.DT = {ammo="Sapience Orb",
-		head=gear.artifact.head,neck="Unmoving Collar +1",ear1="Etiolation Earring",ear2="Odnowa Earring +1",
-		body=gear.artifact.body,hands="Leyline Gloves",ring1="Gelatinous Ring +1",ring2="Moonlight Ring",
+		head=gear.artifact_head,neck="Unmoving Collar +1",ear1="Etiolation Earring",ear2="Odnowa Earring +1",
+		body=gear.artifact_body,hands="Leyline Gloves",ring1="Gelatinous Ring +1",ring2="Moonlight Ring",
 		back=gear.fc_jse_back,waist="Carrier's Sash",legs="Nyame Flanchard",feet="Carmine Greaves +1"}
 		
 	sets.precast.FC['Enhancing Magic'] = set_combine(sets.precast.FC, {waist="Siegel Sash", legs=gear.relic_legs})
@@ -227,8 +225,8 @@ function init_gear_sets()
 	sets.precast.WS['Ground Strike'].HighAcc = set_combine(sets.precast.WS.HighAcc,{})
 	sets.precast.WS['Ground Strike'].FullAcc = set_combine(sets.precast.WS.FullAcc,{})
 		
-	sets.precast.WS['Herculean Slash'] = set_combine(sets.precast['Lunge'], {})
-	sets.precast.WS['Sanguine Blade'] = set_combine(sets.precast['Lunge'], {})
+	sets.precast.WS['Herculean Slash'] = set_combine(sets.precast.JA['Lunge'], {})
+	sets.precast.WS['Sanguine Blade'] = set_combine(sets.precast.JA['Lunge'], {})
 
 	--------------------------------------
 	-- Midcast sets
@@ -249,7 +247,7 @@ function init_gear_sets()
 		body=gear.taeon_phalanx_body,hands="Rawhide Gloves",ring1="Defending Ring",ring2="Moonlight Ring",
 		back=gear.fc_jse_back,waist="Audumbla Sash",legs="Carmine Cuisses +1",feet="Nyame Sollerets"}
 
-	sets.midcast['Enhancing Magic'] = set_combine(sets.midcast.FastRecast,{head=gear.empyrean.head,neck="Incanter's Torque",ear1="Andoaa Earring",ear2="Mimir Earring",hands="Regal Gauntlets",back="Merciful Cape",waist="Olympus Sash",legs=gear.relic_legs})
+	sets.midcast['Enhancing Magic'] = set_combine(sets.midcast.FastRecast,{head=gear.empyrean_head,neck="Incanter's Torque",ear1="Andoaa Earring",ear2="Mimir Earring",hands="Regal Gauntlets",back="Merciful Cape",waist="Olympus Sash",legs=gear.relic_legs})
 	
 	sets.midcast['Enhancing Magic'].SIRD = set_combine(sets.midcast.FastRecast.SIRD,{})
 	
@@ -257,8 +255,8 @@ function init_gear_sets()
 	
 	sets.midcast['Phalanx'].SIRD = set_combine(sets.midcast.FastRecast.SIRD,{head="Futhark Bandeau +2",back="Evasionist's Cape",})
 	
-	sets.midcast['Regen'] = set_combine(sets.midcast['Enhancing Magic'],{head=gear.artifact.head,neck="Sacro Gorget"}) 
-	sets.midcast['Refresh'] = set_combine(sets.midcast['Enhancing Magic'],{head=gear.empyrean.head}) 
+	sets.midcast['Regen'] = set_combine(sets.midcast['Enhancing Magic'],{head=gear.artifact_head,neck="Sacro Gorget"}) 
+	sets.midcast['Refresh'] = set_combine(sets.midcast['Enhancing Magic'],{head=gear.empyrean_head}) 
 	sets.midcast.Stoneskin = set_combine(sets.midcast['Enhancing Magic'], {ear2="Earthcry Earring",waist="Siegel Sash"})
 	sets.midcast.Flash = set_combine(sets.Enmity, {})
 	sets.midcast.Flash.DT = set_combine(sets.Enmity.DT, {})
@@ -295,8 +293,8 @@ function init_gear_sets()
 
 	sets.idle = {ammo="Homiliary",
 	     head="Nyame Helm",neck="Futhark Torque +2",ear1="Tuisto Earring",ear2="Genmei Earring",
-	     body="Runeist's Coat +3",hands=gear.empyrean.hands,ring1="Stikini Ring +1",ring2="Moonlight Ring",
-		 back=gear.enmity_jse_back,waist="Engraved Belt",legs=gear.empyrean.legs,feet=gear.empyrean.feet}
+	     body="Runeist's Coat +3",hands=gear.empyrean_hands,ring1="Stikini Ring +1",ring2="Moonlight Ring",
+		 back=gear.enmity_jse_back,waist="Engraved Belt",legs=gear.empyrean_legs,feet=gear.empyrean_feet}
 		
 	sets.idle.Sphere = set_combine(sets.idle,{body="Mekosu. Harness"})
 			
@@ -319,7 +317,7 @@ function init_gear_sets()
 
 	-- Extra defense sets.  Apply these on top of melee or defense sets.
 	sets.Knockback = {}
-	sets.MP = {ear2="Ethereal Earring",body=gear.empyrean.body,waist="Flume Belt +1"}
+	sets.MP = {ear2="Ethereal Earring",body=gear.empyrean_body,waist="Flume Belt +1"}
 	sets.TreasureHunter = set_combine(sets.TreasureHunter, {})
 	
 	-- Weapons sets
@@ -333,9 +331,9 @@ function init_gear_sets()
 		head="Nyame Helm",neck="Loricate Torque +1",ear1="Genmei Earring",ear2="Ethereal Earring",
 		body="Nyame Mail",hands="Nyame Gauntlets",ring1="Gelatinous Ring +1",ring2="Moonlight Ring",
 		back="Shadow Mantle",waist="Flume Belt +1",legs="Nyame Flanchard",feet="Nyame Sollerets"}
-	sets.defense.PDT_HP = {mmo="Staunch Tathlum +1",
+	sets.defense.PDT_HP = {ammo="Staunch Tathlum +1",
 		head="Nyame Helm",neck="Unmoving Collar +1",ear1="Tuisto Earring",ear2="Odnowa Earring +1",
-		body=gear.artifact.body,hands="Nyame Gauntlets",ring1="Gelatinous Ring +1",ring2="Moonlight Ring",
+		body=gear.artifact_body,hands="Nyame Gauntlets",ring1="Gelatinous Ring +1",ring2="Moonlight Ring",
 		back="Moonlight Cape",waist="Flume Belt +1",legs="Nyame Flanchard",feet="Nyame Sollerets"}
 	sets.defense.MDT = {ammo="Yamarang",
 		head="Nyame Helm",neck="Warder's Charm +1",ear1="Sanare Earring",ear2="Odnowa Earring +1",

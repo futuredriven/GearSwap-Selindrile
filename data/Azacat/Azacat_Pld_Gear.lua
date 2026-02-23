@@ -10,7 +10,7 @@ function user_job_setup()
 	state.MagicalDefenseMode:options('MDT')
 	state.ResistDefenseMode:options('MEVA')
 	state.IdleMode:options('Tank','Kiting','PDT','Block','MDT','Normal')
-	state.Weapons:options('None','SakpataAegis','SakpataOchain','SakpataSrivatsa','NaeglingBlurred','ExcaliburSrivatsa','SequenceSrivatsa'))
+	state.Weapons:options('None','SakpataAegis','SakpataOchain','SakpataSrivatsa','NaeglingBlurred','ExcaliburSrivatsa','SequenceSrivatsa')
 	
 	state.ExtraDefenseMode = M{['description']='Extra Defense Mode','None','MP','Twilight'}
 	
@@ -43,8 +43,9 @@ function user_job_setup()
 ------------------------------------------------------------------
 -- JSE Capes
 ------------------------------------------------------------------
-	-- gear.fastcast_jse_back = {name="Rudianos's Mantle",augments={'INT+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','"Fast Cast"+10',}}
+	gear.fastcast_jse_back = {name="Rudianos's Mantle",augments={'INT+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','"Fast Cast"+10',}}
 	gear.enmity_jse_back = {name="Rudianos's Mantle",augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}}
+	gear.wsd_jse_back = {name="Rudianos's Mantle",augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
 	gear.tp_jse_back = {name="Rudianos's Mantle",augments={'HP+60','Accuracy+20 Attack+20','Accuracy+10','"Store TP"+10','Occ. inc. resist. to stat. ailments+10',}}
 	gear.block_jse_back = {name="Rudianos's Mantle",augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Chance of successful block +5',}}	
 ------------------------------------------------------------------
@@ -93,7 +94,7 @@ function init_gear_sets()
 		back=gear.enmity_jse_back,waist="Audumba Sash",legs="Founder's Hose",feet=gear.sird_eschite_feet}
 		
     sets.Enmity.DT = {ammo="Staunch Tathlum +1",
-        head="Loess Barbuta +1",neck="Moonbeam Necklac",ear1="Odnowa Earring +1",ear2="Trux Earring",
+        head="Loess Barbuta +1",neck="Moonbeam Necklace",ear1="Odnowa Earring +1",ear2="Trux Earring",
         body="Sakpata's Plate",hands=gear.enmity_souveran_hands,ring1="Moonlight Ring",ring2="Moonlight Ring",
         back=gear.enmity_jse_back,waist="Creed Baudrier",legs="Souv. Diechlings +1",feet="Souveran Schuhs +1"}
 		
@@ -277,7 +278,7 @@ function init_gear_sets()
     sets.midcast['Enhancing Magic'].SIRD = {ammo="Staunch Tathlum +1",
 		head="Souv. Schaller +1",neck="Moonlight Necklace",ear1="Odnowa Earring +1",ear2="Andoaa Earring", -- ,ear1="Mimir Earring",ear2="Tuisto Earring"
 		body="Shab. Cuirass +1",hands="Souv. Handsch. +1",ring1="Moonlight Ring",ring2="Moonlight Ring",
-		waist="Audumbla Sash",legs="Founder's Hose",feet="Eschite greaves"}
+		waist="Audumbla Sash",legs="Founder's Hose",feet="Eschite Greaves"}
 
 	sets.midcast.Stoneskin = set_combine(sets.midcast['Enhancing Magic'], {waist="Siegel Sash"})
 
@@ -392,6 +393,7 @@ function init_gear_sets()
 	--------------------------------------
 	-- Custom buff sets
 	--------------------------------------
+	sets.Reraise = {head="Twilight Helm",body="Twilight Mail"}
 	sets.buff.Doom = set_combine(sets.buff.Doom, {})
 	sets.buff.Sleep = {neck="Vim Torque"}
     sets.buff.Cover = {body=gear.relic_body}

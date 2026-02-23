@@ -358,7 +358,7 @@ function init_gear_sets()
 		body=gear.artifact_body,hands="Inyan. Dastanas +2",ring1="Defending Ring",ring2="Inyanga Ring",
 		back="Alaunus's Cape",waist="Fucho-no-obi",legs="Assid. Pants +1",feet="Inyan. Crackows +2"}
 
-	sets.idle.PDT = {main="Mafic Cudgel ",sub="Genmei Shield",ammo="Homiliary",
+	sets.idle.PDT = {main="Mafic Cudgel",sub="Genmei Shield",ammo="Homiliary",
 		head="Bunzi's Hat",neck="Loricate Torque +1",ear1="Moonshade Earring",ear2="Ethereal Earring",
 		body="Bunzi's Robe",hands="Bunzi's Gloves",ring1="Defending Ring",ring2="Dark Ring",
 		back="Alaunus's Cape",waist="Fucho-no-obi",legs="Bunzi's Pants",feet="Bunzi's Sabots"}
@@ -384,10 +384,10 @@ function init_gear_sets()
 
 	sets.defense.PDT = {main="Queller Rod",sub="Genmei Shield",ammo="Homiliary",
 		head="Bunzi's Hat",neck="Loricate Torque +1",ear1="Moonshade Earring",ear2="Ethereal Earring",
-		body="Bunzi's Hat",hands="Ebers Mitts +1",ring1="Defending Ring",ring2="Dark Ring",
+		body="Bunzi's Robe",hands="Ebers Mitts +1",ring1="Defending Ring",ring2="Dark Ring",
 		back="Alaunus's Cape",waist="Fucho-no-obi",legs="Assid. Pants +1",feet="Ebers Duckbills +1"}
 
-	sets.defense.MDT = {main="Mafic Cudgel ",sub="Genmei Shield",ammo="Homiliary",
+	sets.defense.MDT = {main="Mafic Cudgel",sub="Genmei Shield",ammo="Homiliary",
 		head="Befouled Crown",neck="Loricate Torque +1",ear1="Moonshade Earring",ear2="Ethereal Earring",
 		body="Witching Robe",hands="Ebers Mitts +1",ring1="Defending Ring",ring2="Dark Ring",
 		back="Alaunus's Cape",waist="Flax Sash",legs="Assid. Pants +1",feet="Ebers Duckbills +1"}

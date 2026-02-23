@@ -2,7 +2,7 @@ function user_job_setup()
 	-- Options: Override default values
     state.OffenseMode:options('Normal','Acc')
 	state.HybridMode:options('Normal','DT')
-    state.WeaponskillMode:options('Match','Normal','Acc',)
+    state.WeaponskillMode:options('Match','Normal','Acc')
     state.CastingMode:options('Normal','SIRD','Resistant','FullMacc','Fodder','Proc')
     state.IdleMode:options('Normal','Sphere','PDT')
 	state.PhysicalDefenseMode:options('PDT')
@@ -45,6 +45,9 @@ function user_job_setup()
 	gear.wsd_jse_back = {name="Rosmerta's Cape",augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}}
 	-- **** Needs SAP +10 INT ****
 	gear.nuke_jse_back = {name="Rosmerta's Cape",augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','"Mag.Atk.Bns."+10','Phys. dmg. taken-10%',}}
+	gear.crit_jse_back = {name="Rosmerta's Cape",augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Crit. hit rate+10','Phys. dmg. taken-10%',}}
+	
+	gear.ElementalObi = "Yamabuki-no-Obi"
 
 	autows = 'Expiacion'
 
@@ -165,7 +168,7 @@ function init_gear_sets()
 		             body="Amalric Doublet +1",hands="Jhakri Cuffs +2",ring1="Metamor. Ring +1",ring2="Shiva Ring +1",
 			         back=gear.nuke_jse_back,waist="Yamabuki-no-Obi",legs=gear.relic_legs,feet="Amalric Nails +1"}
 					 
-	sets.precast.WS['Sanguine Blade'].DT = set_combine(sets.precast.WS.DT, {back=gear.nuke_jse_back})
+	sets.precast.WS['Flash Nova'].DT = set_combine(sets.precast.WS.DT, {back=gear.nuke_jse_back})
 
 	-- Swap to these on Moonshade using WS if at 3000 TP
 	sets.MaxTP = {ear1="Cessance Earring",ear2="Brutal Earring"}
@@ -259,7 +262,7 @@ function init_gear_sets()
 	sets.midcast['Blue Magic'].Magical.Fodder = {main="Bunzi's Rod",sub="Maxentius",ammo="Pemphredo Tathlum",
 		 head="Jhakri Coronal +2",neck="Baetyl Pendant",ear1="Regal Earring",ear2="Friomisi Earring",
 		 body="Amalric Doublet +1",hands="Amalric Gages +1",ring1="Metamor. Ring +1",ring2="Shiva Ring +1",
-		 back=gear.nuke_jse_back,waist="Yamabuki-no-Obi",gear.relic_legs,feet="Amalric Nails +1"}
+		 back=gear.nuke_jse_back,waist="Yamabuki-no-Obi",legs=gear.relic_legs,feet="Amalric Nails +1"}
 
 	sets.midcast['Blue Magic'].MagicalMnd = set_combine(sets.midcast['Blue Magic'].Magical, {ring2="Stikini Ring +1"})
 	sets.midcast['Blue Magic'].MagicalChr = set_combine(sets.midcast['Blue Magic'].Magical, {})
@@ -312,7 +315,7 @@ function init_gear_sets()
 	sets.midcast['Elemental Magic'] = {main="Maxentius",sub="Sakpata's Sword",ammo="Ghastly Tathlum +1",
 		head="Jhakri Coronal +2",neck="Baetyl Pendant",ear1="Regal Earring",ear2="Friomisi Earring",
 		body="Amalric Doublet +1",hands="Amalric Gages +1",ring1="Shiva Ring +1",ring2="Shiva Ring +1",
-		back=gear.nuke_jse_back,waist=gear.ElementalObi,legs="Luhlaza Shalwar +3",feet="Amalric Nails +1"}
+		back=gear.nuke_jse_back,waist=gear.ElementalObi or "Yamabuki-no-Obi",legs="Luhlaza Shalwar +3",feet="Amalric Nails +1"}
 
 	sets.midcast['Elemental Magic'].Resistant = {main="Maxentius",sub="Sakpata's Sword",ammo="Pemphredo Tathlum",
 		head="Jhakri Coronal +2",neck="Mirage Stole +2",ear1="Regal Earring",ear2="Friomisi Earring",

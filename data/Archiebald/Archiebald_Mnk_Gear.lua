@@ -17,11 +17,11 @@ function user_job_setup()
 ------------------------------------------------------------------
 -- Artifact Armor (AF)
 ------------------------------------------------------------------
-   gear.artifact.head  = {head="Anchorite's Crown"}
-   gear.artifact.body  = {body="Anch. Cyclas +2"}
-   gear.artifact.hands = {hands="Anchorite's Gloves"}
-   gear.artifact.legs  = {legs="Anch. Hose +3"}
-   gear.artifact.feet  = {feet="Anch. Gaiters +3"}
+   gear.artifact_head  = {head="Anchorite's Crown"}
+   gear.artifact_body  = {body="Anch. Cyclas +2"}
+   gear.artifact_hands = {hands="Anchorite's Gloves"}
+   gear.artifact_legs  = {legs="Anch. Hose +3"}
+   gear.artifact_feet  = {feet="Anch. Gaiters +3"}
 ------------------------------------------------------------------
 -- Relic Armor
 ------------------------------------------------------------------
@@ -33,11 +33,11 @@ function user_job_setup()
 ------------------------------------------------------------------
 -- Empyrean Armor
 ------------------------------------------------------------------
-   gear.empyrean.head  = {head="Bhikku Crown +2"}
-   gear.empyrean.body  = {body="Bhikku Cyclas +2"}
-   gear.empyrean.hands = {hands="Bhikku Gloves +1"}
-   gear.empyrean.legs  = {legs="Bhikku Hose +2"}
-   gear.empyrean.feet  = {feet="Bhikku Gaiters +2"}
+   gear.empyrean_head  = {head="Bhikku Crown +2"}
+   gear.empyrean_body  = {body="Bhikku Cyclas +2"}
+   gear.empyrean_hands = {hands="Bhikku Gloves +1"}
+   gear.empyrean_legs  = {legs="Bhikku Hose +2"}
+   gear.empyrean_feet  = {feet="Bhikku Gaiters +2"}
 ------------------------------------------------------------------
 -- JSE Capes
 ------------------------------------------------------------------
@@ -73,11 +73,11 @@ function init_gear_sets()
 	
 	-- Precast sets to enhance JAs on use
 	sets.precast.JA['Hundred Fists'] = {legs=gear.relic_legs}
-	sets.precast.JA['Boost'] = {hands=gear.artifact.hands}
-	sets.precast.JA['Boost'].OutOfCombat = {gear.artifact.hands}
-	sets.precast.JA['Dodge'] = {feet=gear.artifact.feet}
-	sets.precast.JA['Focus'] = {head=gear.artifact.head}
-	sets.precast.JA['Counterstance'] = {gear.relic_feet}
+	sets.precast.JA['Boost'] = {hands=gear.artifact_hands}
+	sets.precast.JA['Boost'].OutOfCombat = {hands=gear.artifact_hands}
+	sets.precast.JA['Dodge'] = {feet=gear.artifact_feet}
+	sets.precast.JA['Focus'] = {head=gear.artifact_head}
+	sets.precast.JA['Counterstance'] = {feet=gear.relic_feet}
 	sets.precast.JA['Footwork'] = {}
 	sets.precast.JA['Formless Strikes'] = {body=gear.relic_body}
 	sets.precast.JA['Mantra'] = {feet=gear.relic_feet}
@@ -86,8 +86,8 @@ function init_gear_sets()
 	
 	sets.precast.JA['Chakra'] = {
 	     neck="Unmoving Collar +1",ear1="Tuisto Earring",ear2="Odnowa Earring +1",
-	     body=gear.artifact.body,hands=gear.relic_hands,ring1="Regal Ring",ring2="Gelatinous Ring +1",
-	     back=gear.vit_back,legs="Nyame Flanchard",feet=gear.empyrean.feet}
+	     body=gear.artifact_body,hands=gear.relic_hands,ring1="Regal Ring",ring2="Gelatinous Ring +1",
+	     back=gear.vit_back,legs="Nyame Flanchard",feet=gear.empyrean_feet}
 
 	-- Waltz set (chr and vit)
 	sets.precast.Waltz = {}
@@ -190,7 +190,7 @@ function init_gear_sets()
 		back=gear.pdt_back,waist="Moonbow Belt +1",legs="Mpaca's Hose",feet="Malignance Boots"}
 	sets.engaged.Acc = {ammo="Coiste Bodhar",
 		head={ name="Adhemar Bonnet +1", augments={'DEX+12','AGI+12','Accuracy+20',}},neck="Mnk. Nodowa +2",ear1="Sherida Earring",ear2="Telos Earring",
-		body=gear.empyrean.body,hands="Adhemar Wrist. +1",ring1="Niqmaddu Ring",ring2="Gere Ring",
+		body=gear.empyrean_body,hands="Adhemar Wrist. +1",ring1="Niqmaddu Ring",ring2="Gere Ring",
 		back=gear.tp_back,waist="Olseni Belt",legs="Malignance Tights",feet="Malignance Boots"}
 
 		-- Defensive melee hybrid sets
@@ -210,7 +210,7 @@ function init_gear_sets()
 
 	sets.buff.Doom = set_combine(sets.buff.Doom, {})
 	sets.buff.Sleep = {}
-	sets.buff.Impetus = {body=gear.empyrean.body}
+	sets.buff.Impetus = {body=gear.empyrean_body}
 	sets.buff.Footwork = {}
 	sets.buff.Boost = {} --waist="Ask Sash"
 	

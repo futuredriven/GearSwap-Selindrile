@@ -60,7 +60,8 @@ function user_job_setup()
 	gear.int_jse_back = {name="Sucellos's Cape",augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10','Spell interruption rate down-10%',}}
 	gear.mnd_jse_back = {name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}}
 	gear.enmity_jse_back = {name="Sucellos's Cape",augments={'MND+20','Eva.+20 /Mag. Eva.+20','MND+10','Enmity-10','Phys. dmg. taken-10%',}}
-	gear.wsd_jse_back = {name="Sucellos's Cape",augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}}	
+	gear.wsd_jse_back = {name="Sucellos's Cape",augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}}
+	gear.nuke_jse_back = gear.int_jse_back
 	
 		-- Additional local binds
 	send_command('bind @` gs c cycle ElementalMode')
@@ -205,10 +206,10 @@ function init_gear_sets()
 	-- Midcast Sets
 
 	-- Gear that converts elemental damage done to recover MP.	
---	sets.midcast.FastRecast = {main="Sakpata's Sword",sub="Sacro Bulwark",ammo="Staunch Tathlum +1",
---		head="Atrophy Chapeau +3",neck="Loricate Torque +1",ear1="Malignance Earring",ear2="Leth. Earring +1",
---		body="Viti. Tabard +3",hands="Bunzi's Gloves",ring1="Defending Ring",ring2="Freke Ring",
---		back=gear.mnd_enfeebling_jse_back,waist="Emphatikos Rope",legs="Bunzi's Pants",feet="Bunzi's Sabots"}
+	sets.midcast.FastRecast = {main="Colada",sub="Clerisy Strap +1",range=empty,ammo="Impatiens",
+		head=gear.artifact_head,neck="Voltsurge Torque",ear1="Loquac. Earring",ear2="Malignance Earring",
+		body=gear.relic_body,hands="Leyline Gloves",ring1="Kishar Ring",ring2="Lebeche Ring",
+		back="Perimede Cape",waist="Witful Belt",legs="Aya. Cosciales +2",feet=gear.carmine_feet_path_d}
 
     sets.midcast.Cure = {main="Bunzi's Rod",sub="Sors Shield",range=empty,ammo="Hasty Pinion +1", -- Daybreak
         head="Kaykaus Mitra +1",neck="Incanter's Torque",ear1="Beatific earring",ear2="Roundel Earring", -- Meili Earring / Mendicant's earring
@@ -221,7 +222,7 @@ function init_gear_sets()
         back="Twilight Cape",waist="Hachirin-no-Obi",legs="Atrophy Tights +3",feet="Vanya Clogs"}
 		
 		--Cureset for if it's not light weather but is light day.
-    sets.midcast.LightWeatherCure = {main="Chatoyant Staff",sub="Curatio Grip",range=empty,ammo="Hasty Pinion +1",
+    sets.midcast.LightDayCure = {main="Chatoyant Staff",sub="Curatio Grip",range=empty,ammo="Hasty Pinion +1",
         head="Kaykaus Mitra +1",neck="Incanter's Torque",ear1="Beatific earring",ear2="Roundel Earring", -- Meili Earring / Mendicant's earring
         body="Kaykaus Bliaut +1",hands="Kaykaus Cuffs +1",ring1="Menelaus's Ring",ring2="Stikini Ring +1 ",
         back="Twilight Cape",waist="Hachirin-no-Obi",legs="Kaykaus Tights +1",feet="Kaykaus Boots +1"}
@@ -284,6 +285,7 @@ function init_gear_sets()
 		
 	sets.midcast['Enfeebling Magic'].DW = {main="Bunzi's Rod",sub="Maxentius"}
 		
+	sets.midcast.DurationOnlyEnfeebling = set_combine(sets.midcast['Enfeebling Magic'], {})
 	sets.midcast.Sleep = set_combine(sets.midcast.DurationOnlyEnfeebling,{back=gear.int_jse_back, waist="Acuity Belt +1"})
 		
 	sets.midcast.Bind = set_combine(sets.midcast.DurationOnlyEnfeebling,{back=gear.int_jse_back, waist="Acuity Belt +1"})
@@ -316,7 +318,7 @@ function init_gear_sets()
 		
 	sets.midcast.Distract = sets.midcast.Frazzle
 		
-	sets.midcast.Frazzle.Resistant = sets.midcast['Enfeebling Magic'].Resistant {range="Ullr",ammo=empty}
+	sets.midcast.Frazzle.Resistant = set_combine(sets.midcast['Enfeebling Magic'].Resistant, {range="Ullr",ammo=empty})
 		
 	sets.midcast.Distract.Resistant = sets.midcast.Frazzle.Resistant
 		
@@ -329,7 +331,7 @@ function init_gear_sets()
 	sets.midcast.Paralyze = sets.midcast.Addle
 	sets.midcast.Slow = sets.midcast.Addle
 	
-	sets.midcast.Addle.Resistant = sets.midcast['Enfeebling Magic'].Resistant {main="Daybreak",sub="Ammurapi Shield"}
+	sets.midcast.Addle.Resistant = set_combine(sets.midcast['Enfeebling Magic'].Resistant, {main="Daybreak",sub="Ammurapi Shield"})
 		
 	sets.midcast.Paralyze.Resistant = sets.midcast.Addle.Resistant
 	sets.midcast.Slow.Resistant = sets.midcast.Addle.Resistant
@@ -352,9 +354,9 @@ function init_gear_sets()
 	sets.midcast.Blind.Resistant = sets.midcast.Gravity.Resistant
 	sets.midcast.Blind.DW = sets.midcast.Gravity.DW
 	
-	sets.midcast.Silence = sets.midcast['Enfeebling Magic'].Resistant {main="Daybreak",sub="Ammurapi Shield",range="Ullr",ammo=empty}
+	sets.midcast.Silence = set_combine(sets.midcast['Enfeebling Magic'].Resistant, {main="Daybreak",sub="Ammurapi Shield",range="Ullr",ammo=empty})
 		
-	sets.midcast.Silence.Resistant = sets.midcast['Enfeebling Magic'].Resistant {main="Bunzi's Rod",sub="Ammurapi Shield",range="Ullr",ammo=empty}
+	sets.midcast.Silence.Resistant = set_combine(sets.midcast['Enfeebling Magic'].Resistant, {main="Bunzi's Rod",sub="Ammurapi Shield",range="Ullr",ammo=empty})
 		
 	sets.midcast.Silence.DW = {main="Bunzi's Rod",sub="Daybreak"}
 	
