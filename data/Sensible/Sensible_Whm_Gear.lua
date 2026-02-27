@@ -9,7 +9,7 @@ function user_job_setup()
 	state.Weapons:options('None','DualWeapons','Maxentius')
 	state.WeaponskillMode:options('Normal','Fodder')
 	
-	default_weapons = 'Maxentius'
+	default_weapons = 'None'
 	default_dual_weapons = 'DualWeapons'
 	
 	autows_list = {['DualWeapons']='Black Halo',['Maxentius']='Black Halo'}
@@ -19,10 +19,10 @@ function user_job_setup()
 ------------------------------------------------------------------
 -- Artifact Armor (AF)
 ------------------------------------------------------------------
-	gear.artifact_head = {head="Theophany Cap +2"}
-	gear.artifact_body = {body="Theo. Bliaut +2"}	
-	gear.artifact_hands = {hands="Theophany Mitts +2"}
-	gear.artifact_legs = {legs="Th. Pantaloons +2"}
+	gear.artifact_head = {name="Theophany Cap +2"}
+	gear.artifact_body = {name="Theo. Bliaut +2"}	
+	gear.artifact_hands = {name="Theophany Mitts +2"}
+	gear.artifact_legs = {name="Th. Pantaloons +2"}
 	gear.artifact_feet = {name="Theo. Duckbills +2"}
 ------------------------------------------------------------------
 -- Relic Armor 
@@ -88,7 +88,7 @@ function init_gear_sets()
 		body="Inyanga Jubbah +2",hands="Fanatic Gloves",ring1="Kishar Ring",ring2="Lebeche Ring",
 		back=gear.fs_jse_back,waist="Witful Belt",legs="Aya. Cosciales +2",feet="Regal Pumps +1"} -- Embla Sash
 		
-    sets.precast.FC.DT = {main=gear.grioavolr_fc_staff,sub="Clerisy Strap +1",ammo="Impatiens",
+    sets.precast.FC.DT = {main="Gada",sub="Genmei Shield",ammo="Impatiens",
 		head="Bunzi's Hat",neck="Clr. Torque +1",ear1="Loquac. Earring",ear2="Malignance Earring",
 		body="Inyanga Jubbah +2",hands="Fanatic Gloves",ring1="Kishar Ring",ring2="Lebeche Ring",
 		back="Perimede Cape",waist="Witful Belt",legs="Aya. Cosciales +2",feet="Regal Pumps +1"}
@@ -106,8 +106,8 @@ function init_gear_sets()
     -- Default set for any weaponskill that isn't any more specifically defined
 	sets.precast.WS = {ammo="Hasty Pinion +1",
 		head="Befouled Crown",neck="Loricate Torque +1",ear1="Moonshade Earring",ear2="Ethereal Earring",
-		body="Witching Robe",hands="Ebers Mitts +1",ring1="Defending Ring",ring2="Dark Ring",
-		back="Alaunus's Cape",waist="Fucho-no-obi",legs="Assid. Pants +1",feet="Ebers Duckbills +1"}
+		body="Witching Robe",hands=gear.empyrean_hands,ring1="Defending Ring",ring2="Dark Ring",
+		back="Alaunus's Cape",waist="Fucho-no-obi",legs="Assid. Pants +1",feet=gear.empyrean_feet}
 
     sets.precast.WS['Flash Nova'] = {}
     sets.precast.WS['Mystic Boon'] = {}
@@ -221,38 +221,38 @@ function init_gear_sets()
 		body=gear.empyrean_body,hands="Fanatic Gloves",ring1="Haoma's Ring",ring2="Haoma's Ring",
 		back="Alaunus's Cape",waist="Bishop's Sash",legs=gear.artifact_legs,feet="Vanya Clogs"}
 
-	sets.midcast.StatusRemoval = {main="Yagrush",sub="Thuellaic Ecu +1",ammo="Hasty Pinion +1",head="Ebers Cap +1",neck="Clr. Torque +2",back="Mending Cape"}
+	sets.midcast.StatusRemoval = {main="Yagrush",sub="Thuellaic Ecu +1",ammo="Hasty Pinion +1",head=gear.empyrean_head,neck="Clr. Torque +2",back="Mending Cape"}
 		
 	sets.midcast.StatusRemoval.DT = {main="Daybreak",sub="Genmei Shield",range=empty,ammo="Staunch Tathlum +1",
-		head="Ebers Cap +3",neck="Loricate Torque +1",ear1="Sanare Earring",ear2="Halasz Earring",
+		head=gear.empyrean_head,neck="Loricate Torque +1",ear1="Sanare Earring",ear2="Halasz Earring",
 		body="Bunzi's Robe",hands=gear.chironic_aspir_gloves,ring1="Defending Ring",ring2="Freke Ring",
-		back="Alaunus's Cape",waist="Emphatikos Rope",legs="Bunzi's Pants",feet="Theo. Duckbills +3"}
+		back="Alaunus's Cape",waist="Emphatikos Rope",legs="Bunzi's Pants",feet=gear.artifact_feet}
 
 	sets.midcast.Erase = set_combine(sets.midcast.StatusRemoval, {neck="Clr. Torque +2"})
 	sets.midcast.Erase.DT = set_combine(sets.midcast.StatusRemoval.DT, {neck="Clr. Torque +1"})
 
     -- 110 total Enhancing Magic Skill; caps even without Light Arts
 	sets.midcast['Enhancing Magic'] = {main="Gada",sub="Ammurapi Shield",ammo="Hasty Pinion +1",
-		head="Telchine Cap",neck="Incanter's Torque",ear1="Andoaa Earring",ear2="Augment. Earring",
+		head="Telchine Cap",neck="Incanter's Torque",ear1="Andoaa Earring",ear2="Mimir Earring",
 		body="Telchine Chas.",hands="Telchine Gloves",ring1="Stikini Ring +1",ring2="Stikini Ring +1",
 		back=gear.fs_jse_back,waist="Olympus Sash",legs="Telchine Braconi",feet=gear.artifact_feet}
 
 	sets.midcast.Stoneskin = set_combine(sets.midcast['Enhancing Magic'], {neck="Nodens Gorget",ear2="Earthcry Earring",waist="Siegel Sash",legs="Shedir Seraweels"})
-	sets.midcast.Auspice = set_combine(sets.midcast['Enhancing Magic'], {feet="Ebers Duckbills +1"})
+	sets.midcast.Auspice = set_combine(sets.midcast['Enhancing Magic'], {feet=gear.empyrean_feet})
 	sets.midcast.Aquaveil = set_combine(sets.midcast['Enhancing Magic'], {main="Vadose Rod",sub="Ammurapi Shield",head="Chironic Hat",hands="Regal Cuffs",waist="Emphatikos Rope",legs="Shedir Seraweels"})
 	sets.midcast.Regen = set_combine(sets.midcast['Enhancing Magic'], {main="Bolelabunga",sub="Ammurapi Shield",
-	head="Inyanga Tiara +2",body=gear.relic_body,hands="Ebers Mitts +1",
+	head="Inyanga Tiara +2",body=gear.relic_body,hands=gear.empyrean_hands,
 	waist="Embla Sash",legs=gear.artifact_legs})
-	sets.midcast.Regen.Duration = set_combine(sets.midcast['Enhancing Magic'], {hands="Ebers Mitts +3",legs="Th. Pant. +3"})
+	sets.midcast.Regen.Duration = set_combine(sets.midcast['Enhancing Magic'], {hands=gear.empyrean_hands,legs=gear.artifact_legs})
 	sets.midcast.Regen.Potency = {head="Inyanga Tiara +2"}
 	sets.midcast.Protect = set_combine(sets.midcast['Enhancing Magic'], {ring2="Sheltered Ring",feet=gear.relic_feet})
 	sets.midcast.Protectra = set_combine(sets.midcast['Enhancing Magic'], {ring2="Sheltered Ring",feet=gear.relic_feet})
 	sets.midcast.Shell = set_combine(sets.midcast['Enhancing Magic'], {ring2="Sheltered Ring",legs=gear.relic_legs})
 	sets.midcast.Shellra = set_combine(sets.midcast['Enhancing Magic'], {ring2="Sheltered Ring",legs=gear.relic_legs})
 	sets.midcast.BarElement = {main="Beneficus",sub="Ammurapi Shield",ammo="Clarus Stone",
-		head="Ebers Cap +1",neck="Incanter's Torque",ear1="Andoaa Earring",ear2="Augment. Earring",
-		body=gear.empyrean_body,hands="Ebers Mitts +1",ring1="Stikini Ring +1",ring2="Stikini Ring +1",
-		back="Alaunus's Cape",waist="Olympus Sash",legs=gear.relic_legs,feet="Ebers Duckbills +1"} -- Embla Sash
+		head=gear.empyrean_head,neck="Incanter's Torque",ear1="Andoaa Earring",ear2="Mimir Earring",
+		body=gear.empyrean_body,hands=gear.empyrean_hands,ring1="Stikini Ring +1",ring2="Stikini Ring +1",
+		back="Alaunus's Cape",waist="Olympus Sash",legs=gear.relic_legs,feet=gear.empyrean_feet} -- Embla Sash
 	
 	sets.midcast.BarStatus = set_combine(sets.midcast['Enhancing Magic'], {neck="Sroda Necklace"})
 
@@ -277,9 +277,9 @@ function init_gear_sets()
 		back="Alaunus's Cape",waist="Hachirin-no-Obi",legs="Vanya Slops",feet="Gende. Galosh. +1"}
 		
 	sets.midcast.Repose = {main="Daybreak",sub="Ammurapi Shield",ammo="Pemphredo Tathlum",
-		head="Ebers Cap +3",neck="Null Loop",ear1="Gwati Earring",ear2="Malignance Earring",
-		body="Ebers Bliaut +3",hands="Ebers Mitts +3",ring1="Stikini Ring +1",ring2="Metamor. Ring +1",
-		back="Null Shawl",waist="Null Belt",legs="Ebers Pant. +3",feet="Ebers Duckbills +3"}
+		head=gear.empyrean_head,neck="Null Loop",ear1="Gwati Earring",ear2="Malignance Earring",
+		body=gear.empyrean_body,hands=gear.empyrean_hands,ring1="Stikini Ring +1",ring2="Metamor. Ring +1",
+		back="Null Shawl",waist="Null Belt",legs=gear.empyrean_legs,feet=gear.empyrean_feet}
 		
 	sets.midcast.Holy = {main="Marin Staff +1",sub="Enki Strap",ammo="Clarus Stone",
 		head="Befouled Crown",neck="Incanter's Torque",ear1="Gwati Earring",ear2="Loquac. Earring",
@@ -349,8 +349,8 @@ function init_gear_sets()
     -- Resting sets
 	sets.resting = {main="Chatoyant Staff",sub="Clemency Grip",ammo="Homiliary",
 		head="Befouled Crown",neck="Chrys. Torque",ear1="Moonshade Earring",ear2="Ethereal Earring",
-		body=gear.empyrean_body,hands="Ebers Mitts +1",ring1="Defending Ring",ring2="Dark Ring",
-		back="Alaunus's Cape",waist="Fucho-no-obi",legs="Assid. Pants +1",feet="Ebers Duckbills +1"}
+		body=gear.empyrean_body,hands=gear.empyrean_hands,ring1="Defending Ring",ring2="Dark Ring",
+		back="Alaunus's Cape",waist="Fucho-no-obi",legs="Assid. Pants +1",feet=gear.empyrean_feet}
 
     -- Idle sets (default idle set not needed since the other three are defined, but leaving for testing purposes)
 	sets.idle = {main="Queller Rod",sub="Genmei Shield",ammo="Homiliary",
@@ -371,7 +371,7 @@ function init_gear_sets()
 	sets.idle.MEVA = {main="Daybreak",sub="Genmei Shield",ammo="Staunch Tathlum +1",
 		head="Bunzi's Hat",neck="Warder's Charm +1",ear1="Sanare Earring",ear2="Ethereal Earring",
 		body="Bunzi's Robe",hands="Bunzi's Gloves",ring1="Defending Ring",ring2="Shadow Ring",
-		back="Null Shawl",waist="Null Belt",legs="Ebers Pant. +3",feet="Ebers Duckbills +3"}
+		back="Null Shawl",waist="Null Belt",legs=gear.empyrean_legs,feet=gear.empyrean_feet}
 		
 	-- Situational Idle sets
     sets.Kiting = {}
@@ -384,18 +384,18 @@ function init_gear_sets()
 
 	sets.defense.PDT = {main="Queller Rod",sub="Genmei Shield",ammo="Homiliary",
 		head="Bunzi's Hat",neck="Loricate Torque +1",ear1="Moonshade Earring",ear2="Ethereal Earring",
-		body="Bunzi's Robe",hands="Ebers Mitts +1",ring1="Defending Ring",ring2="Dark Ring",
-		back="Alaunus's Cape",waist="Fucho-no-obi",legs="Assid. Pants +1",feet="Ebers Duckbills +1"}
+		body="Bunzi's Robe",hands=gear.empyrean_hands,ring1="Defending Ring",ring2="Dark Ring",
+		back="Alaunus's Cape",waist="Fucho-no-obi",legs="Assid. Pants +1",feet=gear.empyrean_feet}
 
 	sets.defense.MDT = {main="Mafic Cudgel",sub="Genmei Shield",ammo="Homiliary",
 		head="Befouled Crown",neck="Loricate Torque +1",ear1="Moonshade Earring",ear2="Ethereal Earring",
-		body="Witching Robe",hands="Ebers Mitts +1",ring1="Defending Ring",ring2="Dark Ring",
-		back="Alaunus's Cape",waist="Flax Sash",legs="Assid. Pants +1",feet="Ebers Duckbills +1"}
+		body="Witching Robe",hands=gear.empyrean_hands,ring1="Defending Ring",ring2="Dark Ring",
+		back="Alaunus's Cape",waist="Flax Sash",legs="Assid. Pants +1",feet=gear.empyrean_feet}
 
     sets.defense.MEVA = {main="Queller Rod",sub="Genmei Shield",ammo="Homiliary",
 		head="Befouled Crown",neck="Warder's Charm +1",ear1="Moonshade Earring",ear2="Ethereal Earring",
-		body="Witching Robe",hands="Ebers Mitts +1",ring1="Defending Ring",ring2="Inyanga Ring",
-		back="Alaunus's Cape",waist="Flax Sash",legs="Assid. Pants +1",feet="Ebers Duckbills +1"}
+		body="Witching Robe",hands=gear.empyrean_hands,ring1="Defending Ring",ring2="Inyanga Ring",
+		back="Alaunus's Cape",waist="Flax Sash",legs="Assid. Pants +1",feet=gear.empyrean_feet}
 		
 		-- Engaged sets
 
@@ -407,8 +407,8 @@ function init_gear_sets()
     -- Basic set for if no TP weapon is defined.
     sets.engaged = {ammo="Homiliary",
 		head="Befouled Crown",neck="Loricate Torque +1",ear1="Moonshade Earring",ear2="Ethereal Earring",
-		body="Witching Robe",hands="Ebers Mitts +1",ring1="Defending Ring",ring2="Dark Ring",
-		back="Alaunus's Cape",waist="Flax Sash",legs="Assid. Pants +1",feet="Ebers Duckbills +1"}
+		body="Witching Robe",hands=gear.empyrean_hands,ring1="Defending Ring",ring2="Dark Ring",
+		back="Alaunus's Cape",waist="Flax Sash",legs="Assid. Pants +1",feet=gear.empyrean_feet}
 		
     sets.engaged.Acc = {}
 
@@ -417,7 +417,7 @@ function init_gear_sets()
     sets.engaged.DW.Acc = {}
 
 		-- Buff sets: Gear that needs to be worn to actively enhance a current player buff.
-    sets.buff['Divine Caress'] = {hands="Ebers Mitts +1",back="Mending Cape"}
+    sets.buff['Divine Caress'] = {hands=gear.empyrean_hands,back="Mending Cape"}
     sets.buff.Sublimation = {} -- waist="Embla Sash"
     sets.buff.DTSublimation = {} -- waist="Embla Sash"
 
