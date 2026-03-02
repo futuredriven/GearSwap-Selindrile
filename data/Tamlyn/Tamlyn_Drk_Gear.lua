@@ -18,9 +18,9 @@ function user_job_setup()
 -- Artifact Armor (AF)
 ------------------------------------------------------------------
 	gear.artifact_head = {head="Igno. Burgeonet +1"}
-	gear.artifact_body = {body="Ignominy Cuirass +3"}	
-	gear.artifact_hands = {hands="Igno. Gauntlets +1"}
-	gear.artifact_legs = {legs="Ig. Flanchard +2"}
+	gear.artifact_body = {name="Ignominy Cuirass +3"}	
+	gear.artifact_hands = {name="Igno. Gauntlets +1"}
+	gear.artifact_legs = {name="Ig. Flanchard +2"}
 	gear.artifact_feet = {name="Igno. Sollerets +1"}
 ------------------------------------------------------------------
 -- Relic Armor 
@@ -34,9 +34,9 @@ function user_job_setup()
 -- empyrean Armor
 ------------------------------------------------------------------
 	gear.empyrean_head = {name=""}
-	gear.empyrean_body = {body="Heath. Cuirass +1"}	
-	gear.empyrean_hands = {hands="Heath. Gauntlets +1"}
-	gear.empyrean_legs = {legs="Heath. Flanchard +1"}
+	gear.empyrean_body = {name="Heath. Cuirass +1"}	
+	gear.empyrean_hands = {name="Heath. Gauntlets +1"}
+	gear.empyrean_legs = {name="Heath. Flanchard +1"}
 	gear.empyrean_feet = {name=""}
 ------------------------------------------------------------------
 -- JSE Capes

@@ -17,27 +17,27 @@ function user_job_setup()
 ------------------------------------------------------------------
 -- Artifact Armor (AF)
 ------------------------------------------------------------------
-   gear.artifact_head  = {head="Anchorite's Crown"}
-   gear.artifact_body  = {body="Anch. Cyclas +2"}
-   gear.artifact_hands = {hands="Anchorite's Gloves"}
-   gear.artifact_legs  = {legs="Anch. Hose +3"}
-   gear.artifact_feet  = {feet="Anch. Gaiters +3"}
+   gear.artifact_head  = {name="Anchorite's Crown"}
+   gear.artifact_body  = {name="Anch. Cyclas +2"}
+   gear.artifact_hands = {name="Anchorite's Gloves"}
+   gear.artifact_legs  = {name="Anch. Hose +3"}
+   gear.artifact_feet  = {name="Anch. Gaiters +3"}
 ------------------------------------------------------------------
 -- Relic Armor
 ------------------------------------------------------------------
-   gear.relic_head  = {head="Hes. Crown"}
-   gear.relic_body  = {body="Hes. Cyclas"}
-   gear.relic_hands = {hands="Hes. Gloves +3"}
-   gear.relic_legs  = {legs="Hes. Hose +3"}
-   gear.relic_feet  = {feet="Hes. Gaiters +3"}
+   gear.relic_head  = {name="Hes. Crown"}
+   gear.relic_body  = {name="Hes. Cyclas"}
+   gear.relic_hands = {name="Hes. Gloves +3"}
+   gear.relic_legs  = {name="Hes. Hose +3"}
+   gear.relic_feet  = {name="Hes. Gaiters +3"}
 ------------------------------------------------------------------
 -- Empyrean Armor
 ------------------------------------------------------------------
-   gear.empyrean_head  = {head="Bhikku Crown +2"}
-   gear.empyrean_body  = {body="Bhikku Cyclas +2"}
-   gear.empyrean_hands = {hands="Bhikku Gloves +1"}
-   gear.empyrean_legs  = {legs="Bhikku Hose +2"}
-   gear.empyrean_feet  = {feet="Bhikku Gaiters +2"}
+   gear.empyrean_head  = {name="Bhikku Crown +2"}
+   gear.empyrean_body  = {name="Bhikku Cyclas +2"}
+   gear.empyrean_hands = {name="Bhikku Gloves +1"}
+   gear.empyrean_legs  = {name="Bhikku Hose +2"}
+   gear.empyrean_feet  = {name="Bhikku Gaiters +2"}
 ------------------------------------------------------------------
 -- JSE Capes
 ------------------------------------------------------------------

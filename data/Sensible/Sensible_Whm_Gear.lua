@@ -89,7 +89,7 @@ function init_gear_sets()
 		back=gear.fs_jse_back,waist="Witful Belt",legs="Aya. Cosciales +2",feet="Regal Pumps +1"} -- Embla Sash
 		
     sets.precast.FC.DT = {main="Gada",sub="Genmei Shield",ammo="Impatiens",
-		head="Bunzi's Hat",neck="Clr. Torque +1",ear1="Loquac. Earring",ear2="Malignance Earring",
+		head="Bunzi's Hat",neck="Clr. Torque +2",ear1="Loquac. Earring",ear2="Malignance Earring",
 		body="Inyanga Jubbah +2",hands="Fanatic Gloves",ring1="Kishar Ring",ring2="Lebeche Ring",
 		back="Perimede Cape",waist="Witful Belt",legs="Aya. Cosciales +2",feet="Regal Pumps +1"}
 
@@ -229,7 +229,7 @@ function init_gear_sets()
 		back="Alaunus's Cape",waist="Emphatikos Rope",legs="Bunzi's Pants",feet=gear.artifact_feet}
 
 	sets.midcast.Erase = set_combine(sets.midcast.StatusRemoval, {neck="Clr. Torque +2"})
-	sets.midcast.Erase.DT = set_combine(sets.midcast.StatusRemoval.DT, {neck="Clr. Torque +1"})
+	sets.midcast.Erase.DT = set_combine(sets.midcast.StatusRemoval.DT, {neck="Clr. Torque +2"})
 
     -- 110 total Enhancing Magic Skill; caps even without Light Arts
 	sets.midcast['Enhancing Magic'] = {main="Gada",sub="Ammurapi Shield",ammo="Hasty Pinion +1",

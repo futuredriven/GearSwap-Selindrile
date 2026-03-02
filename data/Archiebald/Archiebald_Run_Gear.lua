@@ -16,27 +16,27 @@ function user_job_setup()
 ------------------------------------------------------------------
 -- Artifact Armor (AF)
 ------------------------------------------------------------------
-	gear.artifact_head  = {head="Rune. Bandeau +3"}
-	gear.artifact_body  = {body="Runeist Coat +3"}
-	gear.artifact_hands = {hands="Runeist Mitons +3"}
-	gear.artifact_legs  = {legs="Rune. Trousers +3"}
-	gear.artifact_feet  = {feet="Runeist Bottes +2"}
+	gear.artifact_head  = {name="Rune. Bandeau +3"}
+	gear.artifact_body  = {name="Runeist Coat +3"}
+	gear.artifact_hands = {name="Runeist Mitons +3"}
+	gear.artifact_legs  = {name="Rune. Trousers +3"}
+	gear.artifact_feet  = {name="Runeist Bottes +2"}
 ------------------------------------------------------------------
 -- Relic Armor
 ------------------------------------------------------------------
-	gear.relic_head  = {head=""}
-	gear.relic_body  = {body="Futhark Coat +2"}
-	gear.relic_hands = {hands="Futhark Mitons +1"}
-	gear.relic_legs  = {legs="Futhark Trousers +3"}
-	gear.relic_feet  = {feet="Futhark Boots +1"}
+	gear.relic_head  = {name=""}
+	gear.relic_body  = {name="Futhark Coat +2"}
+	gear.relic_hands = {name="Futhark Mitons +1"}
+	gear.relic_legs  = {name="Futhark Trousers +3"}
+	gear.relic_feet  = {name="Futhark Boots +1"}
 ------------------------------------------------------------------
 -- Empyrean Armor
 ------------------------------------------------------------------
-	gear.empyrean_head  = {head="Erilaz Galea +2"}
-	gear.empyrean_body  = {body="Erilaz Surcoat +2"}
-	gear.empyrean_hands = {hands="Erilaz Gauntlets +2"}
-	gear.empyrean_legs  = {legs="Eri. Leg Guards +2"}
-	gear.empyrean_feet  = {feet="Erilaz Greaves +2"}
+	gear.empyrean_head  = {name="Erilaz Galea +2"}
+	gear.empyrean_body  = {name="Erilaz Surcoat +2"}
+	gear.empyrean_hands = {name="Erilaz Gauntlets +2"}
+	gear.empyrean_legs  = {name="Eri. Leg Guards +2"}
+	gear.empyrean_feet  = {name="Erilaz Greaves +2"}
 ------------------------------------------------------------------
 -- JSE Capes
 ------------------------------------------------------------------

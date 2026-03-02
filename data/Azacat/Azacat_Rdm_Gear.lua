@@ -32,10 +32,10 @@ function user_job_setup()
 ------------------------------------------------------------------
 -- Artifact Armor (AF)
 ------------------------------------------------------------------
-	gear.artifact_head = {head="Atrophy Chapeau +3"}
-	gear.artifact_body = {body="Atrophy Tabard +3"}	
-	gear.artifact_hands = {hands="Atrophy Gloves +3"}
-	gear.artifact_legs = {legs="Atrophy Tights +3"}
+	gear.artifact_head = {name="Atrophy Chapeau +3"}
+	gear.artifact_body = {name="Atrophy Tabard +3"}	
+	gear.artifact_hands = {name="Atrophy Gloves +3"}
+	gear.artifact_legs = {name="Atrophy Tights +3"}
 	gear.artifact_feet = {name=""}	
 ------------------------------------------------------------------
 -- Relic Armor 

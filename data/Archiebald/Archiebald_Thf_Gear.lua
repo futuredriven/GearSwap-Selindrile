@@ -19,29 +19,29 @@ function user_job_setup()
 ------------------------------------------------------------------
 -- Artifact Armor (AF)
 ------------------------------------------------------------------
-   gear.artifact_head  = {head="Pill. Bonnet +1"}
-   gear.artifact_body  = {body="Pillager's Vest +1"}
-   gear.artifact_hands = {hands="Pill. Armlets +1"}
-   gear.artifact_legs  = {legs="Pill. Culottes +1"}
-   gear.artifact_feet  = {feet="Pill. Poulaines +1"}
+   gear.artifact_head  = {name="Pill. Bonnet +1"}
+   gear.artifact_body  = {name="Pillager's Vest +1"}
+   gear.artifact_hands = {name="Pill. Armlets +1"}
+   gear.artifact_legs  = {name="Pill. Culottes +1"}
+   gear.artifact_feet  = {name="Pill. Poulaines +1"}
 
 ------------------------------------------------------------------
 -- Relic Armor
 ------------------------------------------------------------------
-   gear.relic_head  = {head=""}
-   gear.relic_body  = {body=""}
-   gear.relic_hands = {hands="Plun. Armlets +1"}
-   gear.relic_legs  = {legs=""}
-   gear.relic_feet  = {feet=""}
+   gear.relic_head  = {name=""}
+   gear.relic_body  = {name=""}
+   gear.relic_hands = {name="Plun. Armlets +1"}
+   gear.relic_legs  = {name=""}
+   gear.relic_feet  = {name=""}
 
 ------------------------------------------------------------------
 -- Empyrean Armor
 ------------------------------------------------------------------
-   gear.empyrean_head  = {head=""}
-   gear.empyrean_body  = {body=""}
-   gear.empyrean_hands = {hands=""}
-   gear.empyrean_legs  = {legs=""}
-   gear.empyrean_feet  = {feet="Skulk. Poulaines +1"}
+   gear.empyrean_head  = {name=""}
+   gear.empyrean_body  = {name=""}
+   gear.empyrean_hands = {name=""}
+   gear.empyrean_legs  = {name=""}
+   gear.empyrean_feet  = {name="Skulk. Poulaines +1"}
 
 ------------------------------------------------------------------
 -- JSE Capes

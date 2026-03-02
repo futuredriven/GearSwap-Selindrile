@@ -17,26 +17,26 @@ function user_job_setup()
 ------------------------------------------------------------------
 -- Artifact Armor (AF)
 ------------------------------------------------------------------
-	gear.artifact_head = {head="Vishap Armet +2"}
-	gear.artifact_body = {body="Vishap Mail +2"}
-	gear.artifact_hands = {hands="Vis. Fng. Gaunt. +2"}
-	gear.artifact_legs = {legs="Vishap Brais +3"}
-	gear.artifact_feet = {feet="Vishap Greaves +2"}
+	gear.artifact_head = {name="Vishap Armet +2"}
+	gear.artifact_body = {name="Vishap Mail +2"}
+	gear.artifact_hands = {name="Vis. Fng. Gaunt. +2"}
+	gear.artifact_legs = {name="Vishap Brais +3"}
+	gear.artifact_feet = {name="Vishap Greaves +2"}
 ------------------------------------------------------------------
 -- Relic Armor 
 ------------------------------------------------------------------
-	gear.relic_head = {head="Ptero. Armet +1"}
-	gear.relic_body = {body="Ptero. Mail +2"}	
-	gear.relic_hands = {hands="Ptero. Fin. G. +2"}
-	gear.relic_legs = {legs="Ptero. Brais +2"}
-	gear.relic_feet = {feet="Ptero. Greaves +1"}
+	gear.relic_head = {name="Ptero. Armet +1"}
+	gear.relic_body = {name="Ptero. Mail +2"}	
+	gear.relic_hands = {name="Ptero. Fin. G. +2"}
+	gear.relic_legs = {name="Ptero. Brais +2"}
+	gear.relic_feet = {name="Ptero. Greaves +1"}
 ------------------------------------------------------------------
 -- empyrean Armor
 ------------------------------------------------------------------
 	gear.empyrean_head = {name=""}
-	gear.empyrean_body = {body=""}	
-	gear.empyrean_hands = {hands="Pel. Vambraces +1"}
-	gear.empyrean_legs = {legs=""}
+	gear.empyrean_body = {name=""}	
+	gear.empyrean_hands = {name="Pel. Vambraces +1"}
+	gear.empyrean_legs = {name=""}
 	gear.empyrean_feet = {name=""}
 ------------------------------------------------------------------
 -- JSE Capes
