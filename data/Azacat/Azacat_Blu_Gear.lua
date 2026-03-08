@@ -520,7 +520,7 @@ function select_default_macro_book()
 end
 
 function user_job_lockstyle()
-	windower.chat.input('/lockstyleset 005')
+	windower.chat.input('/lockstyleset 001')
 end
 
 buff_spell_lists = {

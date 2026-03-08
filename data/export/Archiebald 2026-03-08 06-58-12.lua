@@ -1,0 +1,17 @@
+sets.exported = {
+    main="Epeolatry",
+    sub="Utu Grip",
+    ammo="Homiliary",
+    head="Nyame Helm",
+    body="Runeist Coat +3",
+    hands="Erilaz Gauntlets +2",
+    legs={ name="Carmine Cuisses +1", augments={'Accuracy+12','DEX+12','MND+20',}},
+    feet="Erilaz Greaves +2",
+    neck={ name="Futhark Torque +2", augments={'Path: A',}},
+    waist="Engraved Belt",
+    left_ear="Tuisto Earring",
+    right_ear="Genmei Earring",
+    left_ring="Stikini Ring +1",
+    right_ring="Moonlight Ring",
+    back={ name="Ogma's Cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},
+}

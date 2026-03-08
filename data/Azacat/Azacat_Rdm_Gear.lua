@@ -581,17 +581,7 @@ function user_job_buff_change(buff, gain)
 end
 
 function user_job_lockstyle()
-	if player.sub_job == 'SCH' then
-		if state.Buff['Light Arts'] or state.Buff['Addendum: White'] then
-			windower.chat.input('/lockstyleset 001')
-		elseif state.Buff['Dark Arts'] or state.Buff['Addendum: Black'] then
-			windower.chat.input('/lockstyleset 002')
-		else
-			windower.chat.input('/lockstyleset 004')
-		end
-	elseif player.sub_job == 'NIN' or player.sub_job == 'DNC' then
-		windower.chat.input('/lockstyleset 020')
-	end
+	windower.chat.input('/lockstyleset 001')
 end
 
 buff_spell_lists = {

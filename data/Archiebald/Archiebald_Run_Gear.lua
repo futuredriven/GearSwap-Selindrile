@@ -1,12 +1,12 @@
 function user_job_setup()
 	state.OffenseMode:options('Normal','Acc','FullAcc')
-	state.HybridMode:options('Tank','Tank_HP','Normal','DTLite')
+	state.HybridMode:options('Normal','Tank','Tank_HP','DTLite')
 	state.WeaponskillMode:options('Match','Normal','Acc','FullAcc')
 	state.CastingMode:options('SIRD','Normal')
-	state.PhysicalDefenseMode:options('PDT_HP','PDT')
-	state.MagicalDefenseMode:options('MDT_HP','MDT')
+	state.PhysicalDefenseMode:options('PDT','PDT_HP')
+	state.MagicalDefenseMode:options('MDT','MDT_HP')
 	state.ResistDefenseMode:options('MEVA','MEVA_HP')
-	state.IdleMode:options('Tank','KiteTank') --,'Normal','Sphere'
+	state.IdleMode:options('Normal','Tank','KiteTank') --,'Normal','Sphere'
 	state.Weapons:options('None','Aettir','Lionheart','Epeolatry')
 	
 	state.ExtraDefenseMode = M{['description']='Extra Defense Mode','None','MP'}
@@ -289,11 +289,12 @@ function init_gear_sets()
 	-- Idle/resting/defense/etc sets
 	--------------------------------------
 
+
 	sets.resting = {}
 
 	sets.idle = {ammo="Homiliary",
 	     head="Nyame Helm",neck="Futhark Torque +2",ear1="Tuisto Earring",ear2="Genmei Earring",
-	     body="Runeist's Coat +3",hands=gear.empyrean_hands,ring1="Stikini Ring +1",ring2="Moonlight Ring",
+	     body=gear.artifact_body,hands=gear.empyrean_hands,ring1="Stikini Ring +1",ring2="Moonlight Ring",
 		 back=gear.enmity_jse_back,waist="Engraved Belt",legs=gear.empyrean_legs,feet=gear.empyrean_feet}
 		
 	sets.idle.Sphere = set_combine(sets.idle,{body="Mekosu. Harness"})
