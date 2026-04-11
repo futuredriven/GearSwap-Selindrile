@@ -1,4 +1,4 @@
-function user_job_setup()
+function character_user_job_setup()
 	-- Options: Override default values
 	state.CastingMode:options('Normal','Resistant','Proc','OccultAcumen')
 	state.OffenseMode:options('Normal')

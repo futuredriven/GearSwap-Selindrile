@@ -1,4 +1,4 @@
-function user_job_setup()
+function character_user_job_setup()
 
 	state.OffenseMode:options('Normal','Acc','FullAcc')
 	state.HybridMode:options('Tank','Tank_HP','Normal','DTLite')

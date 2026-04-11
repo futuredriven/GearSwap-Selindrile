@@ -78,6 +78,7 @@ function job_setup()
 	rangedautows = 'Last Stand'
 	autofood = 'Sublime Sushi'
 	ammostock = 98
+	displayroll = true
 
 	define_roll_values()
 	init_job_states({"Capacity","AutoFoodMode","AutoTrustMode","LuzafRing","AutoWSMode","RngHelper","AutoShadowMode","AutoStunMode","AutoDefenseMode"},{"AutoBuffMode","AutoSambaMode","AutoRuneMode","Weapons","OffenseMode","RangedMode","WeaponskillMode","ElementalMode","IdleMode","Passive","RuneElement","CompensatorMode","RollMode","TreasureMode",})
@@ -313,6 +314,7 @@ function define_roll_values()
 end
 
 function display_roll_info(spell)
+	if not displayroll then return end
 	rollinfo = rolls[spell.english]
 	local rollsize = (state.LuzafRing.value and 'Large') or 'Small'
 

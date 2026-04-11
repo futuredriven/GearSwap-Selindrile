@@ -1044,6 +1044,7 @@ function handle_enmity(cmdParams)
 		if not cmdParams:contains('short') then
 			for i, ability in ipairs(data.abilities.enmity.long_cooldown) do
 				local ability_id = get_ability_id_by_name(ability)
+				local ability_recast_id = res.job_abilities[ability_id].recast_id
 				local targets_enemy = res.job_abilities[ability_id].targets:contains('Enemy')
 
 				if silent_can_ability(ability) and abil_recasts[ability_recast_id] < latency and not ((cmdParams:contains('aoe') and targets_enemy) or (cmdParams:contains('target') and not targets_enemy)) then

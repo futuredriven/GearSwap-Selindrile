@@ -354,18 +354,18 @@ function init_include()
 	--Certain Checks
 	global_on_load()
 	
-	-- General var initialization and setup.
-	if job_setup then
-		job_setup()
-	end
-
 	-- User-specific var initialization and setup.
 	if user_setup then
 		user_setup()
 	end
-	
+
 	if character_setup then
 		character_setup()
+	end
+	
+	-- General var initialization and setup.
+	if job_setup then
+		job_setup()
 	end
 	
 	-- Job-User-specific var initialization and setup.
@@ -2249,10 +2249,24 @@ function sub_job_change(newSubjob, oldSubjob)
 	if user_setup then
 		user_setup()
 	end
+
+	if character_setup then
+		character_setup()
+	end
 	
+	-- General var initialization and setup.
+	if job_setup then
+		job_setup()
+	end
+	
+	-- Job-User-specific var initialization and setup.
 	if user_job_setup then
 		user_job_setup()
-	end	
+	end
+	
+	if character_user_job_setup then
+		character_user_job_setup()
+	end
 	
 	if extra_user_setup then
 		extra_user_setup()
