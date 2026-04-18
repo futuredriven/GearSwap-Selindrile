@@ -295,7 +295,7 @@ function init_gear_sets()
 	sets.idle = {ammo="Homiliary",
 	     head="Nyame Helm",neck="Futhark Torque +2",ear1="Tuisto Earring",ear2="Genmei Earring",
 	     body=gear.artifact_body,hands=gear.empyrean_hands,ring1="Stikini Ring +1",ring2="Moonlight Ring",
-		 back=gear.enmity_jse_back,waist="Engraved Belt",legs=gear.empyrean_legs,feet=gear.empyrean_feet}
+		 back=gear.enmity_jse_back,waist="Null Belt",legs=gear.empyrean_legs,feet=gear.empyrean_feet}
 		
 	sets.idle.Sphere = set_combine(sets.idle,{body="Mekosu. Harness"})
 			
