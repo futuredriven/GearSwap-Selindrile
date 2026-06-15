@@ -144,12 +144,12 @@ function init_gear_sets()
 		body="Lethargy Sayon +3",hands="Leth. Ganth. +3",ring1="Stikini Ring +1",ring2="Metamor. Ring +1",
 		back=gear.physical_mnd_wsd_jse_back,waist="Fotia Belt",legs="Leth. Fuseau +3",feet="Leth. Houseaux +3"}
 
-	sets.precast.WS['Chant Du Cygne'] = {range=empty,ammo="Coiste Bodhar",
+	sets.precast.WS['Chant du Cygne'] = {range=empty,ammo="Coiste Bodhar",
 		head="Nyame Helm",neck="Fotia Gorget",ear1="Sherida Earring",ear2="Brutal Earring",
 		body="Malignance Tabard",hands="Malignance Gloves",ring1="Epaminondas's Ring",ring2="Cornelia's Ring",
 		back=gear.str_wsd_jse_back,waist="Fotia Belt",legs="Nyame Flanchard",feet="Leth. Houseaux +3"}
 		
-	sets.precast.WS['Evisceration'] = sets.precast.WS['Chant Du Cygne']
+	sets.precast.WS['Evisceration'] = sets.precast.WS['Chant du Cygne']
 
 	sets.precast.WS['Savage Blade'] = {range=empty,ammo="Oshasha's Treatise",
 		head="Viti. Chapeau +3",neck="Rep. Plat. Medal",ear1="Sherida Earring",ear2="Moonshade Earring",

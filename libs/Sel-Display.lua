@@ -184,6 +184,7 @@ function update_job_states()
 		MagicalDefenseMode = "Magical Defense",
 		PactSpamMode = "Pact Spam",
 		Passive = "Passive",
+		PetEnmityGear = "PetEnmityGear",
 		PetMode = "Pet Mode",
 		PetWSGear = "PetWSGear",
 		PhysicalDefenseMode = "Physical Defense",

@@ -1074,7 +1074,7 @@ function just_acted(spell, spellMap, eventArgs)
 		cancel_spell()
 		eventArgs.cancel = true
 		return true
-	elseif spell and (moving and not state.Uninterruptible.value) and not state.RngHelper.value and state.MiniQueue.value and (spell.action_type == 'Magic' or spell.action_type == 'Item' or spell.action_type == 'Ranged Attack') then
+	elseif spell and (moving and state.Uninterruptible.value == 'Delay') and not state.RngHelper.value and state.MiniQueue.value and (spell.action_type == 'Magic' or spell.action_type == 'Item' or spell.action_type == 'Ranged Attack') then
 		cancel_spell()
 		eventArgs.cancel = true
 		delayed_prefix = spell.prefix or ''
@@ -2820,7 +2820,7 @@ windower.raw_register_event('prerender', function()
 				send_command('gs c update')
 			end
 			
-			if not state.Uninterruptible.value then
+			if not state.Uninterruptible.value == 'Full' then
 				delayed_cast = ''
 				prepared_action = ''
 				if buffup~= '' then
@@ -2842,13 +2842,8 @@ windower.raw_register_event('prerender', function()
 	wasmoving = moving
 end)
 
--- Uninterruptible Handling
-
-state.Uninterruptible = M(false, 'Uninterruptible')
-fixed_pos = ''
-
 windower.raw_register_event('outgoing chunk',function(id,original,modified,injected,blocked)
-	if not blocked and id == 0x15 and state.Uninterruptible.value then
+	if not blocked and id == 0x15 and state.Uninterruptible.value == 'Full' then
 		if player.status ~= 'Event' and (gearswap.cued_packet or just_acted()) and fixed_pos ~= '' then
 			return original:sub(1,4)..fixed_pos..original:sub(17)
 		else

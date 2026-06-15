@@ -130,6 +130,7 @@ function init_include()
 	state.WeaponSets			= M{['description'] = 'Weapon Sets', 'None'}
 	state.WeaponskillMode		= M{['description'] = 'Weaponskill Mode', 'Match'}
 	state.AspisMode				= M{['description'] = 'Aspis Mode', '250','500','1000','Always','Never'}
+	state.Uninterruptible 		= M{['description'] = 'Uninterruptible','Delay','Off','Full'}
 	
 	state.AdjustTargets			= M(true, 'Automatically Adjust Targets')
 	state.AutoAcceptRaiseMode	= M(false, 'Auto Accept Raise Mode')
@@ -271,6 +272,7 @@ function init_include()
 	elemental_magic_proc_target_id = ''
 	cached_weapon = ''
 	check_internal_weapons = false
+	fixed_pos = ''
 
 	-- Buff tracking that buffactive can't detect
 	lastwarcry = ''

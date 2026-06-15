@@ -13,7 +13,6 @@ state.DisplayMode = M(true, 'Display Mode') --Set this to false if you don't wan
 --display.transparancy = 192
 --display.colors = {}
 --display.labels = {}
---}
 
 bayld_items = {'Tlalpoloani','Macoquetza','Camatlatia','Icoyoca','Tlamini','Suijingiri Kanemitsu',
 'Zoquittihuitz','Quauhpilli Helm','Chocaliztli Mask','Xux Hat','Quauhpilli Gloves','Xux Trousers',
